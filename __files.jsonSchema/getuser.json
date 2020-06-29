@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome",
+    "definitions": {
+        "Welcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "userId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "telephone": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "name",
+                "telephone",
+                "userId"
+            ],
+            "title": "Welcome"
+        }
+    }
+}
