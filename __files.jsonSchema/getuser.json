@@ -1,23 +1,30 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome",
+    "$ref": "#/definitions/getuser",
     "definitions": {
-        "Welcome": {
+        "getuser": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "userId": {
                     "type": "string",
-                    "format": "uuid"
+                    "format": "uuid",
+                    "faker": "random.uuid"
+                    
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "faker": "name.findName"
                 },
                 "email": {
-                    "type": "string"
+                    "type": "string",
+                    "faker": "internet.email"
                 },
                 "telephone": {
-                    "type": "string"
+                    "type": "string",
+                    "faker": "phone.phoneNumber"
+
+
                 }
             },
             "required": [
@@ -26,7 +33,7 @@
                 "telephone",
                 "userId"
             ],
-            "title": "Welcome"
+            "title": "getuser"
         }
     }
 }
